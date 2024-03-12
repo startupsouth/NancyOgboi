@@ -24,6 +24,11 @@ header {
   background: #fff;
 }
 
+.logo {
+ font-family: "Oleo Script Swash Caps";
+ color: #4D7A35;
+ font-size: 35px;
+}
 header nav ul li .nav-link {
   font-family: Noto Sans;
   font-size: 16px;
@@ -122,6 +127,7 @@ button {
   padding-left: 30px;
   position: relative;
   z-index: 999;
+  
 }
 .text .button {
   margin-top: 60px;
@@ -242,6 +248,10 @@ button {
 /* FEATURED PRODUCT ENDING */
 
 /* consultant section  */
+.consultation {
+ background-color: #F9EBC8;
+
+}
 .consultation h2 {
   color: #4d7a35;
   font-weight: bold;
@@ -265,7 +275,7 @@ button {
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover;
-  margin: 100px 0 50px 0;
+ 
   position: relative;
 }
 /* .overLayer{
@@ -368,7 +378,7 @@ footer p {
     position: absolute;
     width: 100%;
     height: fit-content;
-    bottom: 40px;
+    bottom: 48px;
   }
   .hero h1 {
     font-size: 52px;
@@ -410,6 +420,10 @@ footer p {
   .textImg img {
     height: 100%;
   }
+  .text p {
+    font-size: 25px;
+    line-height: 40px;
+  }
   .knownledgeCenter h6 {
     font-size: 20px;
   }
@@ -425,6 +439,10 @@ footer p {
   /* FEATURED PRODUCT ENDING */
 
   /* consulation section  */
+    .consultation {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
   .consultation h2 {
     font-size: 40px;
   }
