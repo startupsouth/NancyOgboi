@@ -109,9 +109,9 @@ button {
 }
 
 .imgContent .sec-img {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
-  bottom: -250px;
+  /* bottom: -250px; */
   width: 100%;
 }
 .text {
@@ -153,7 +153,7 @@ button {
   object-fit: cover;
 }
 .about h2 {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: rgba(77, 122, 53, 1);
@@ -276,6 +276,7 @@ button {
     height: 100%;
 } */
 .healthy-recipes h2 {
+  font-size: 24px;
   color: #fff;
   font-weight: 500;
   margin-bottom: 20px;
@@ -291,6 +292,11 @@ button {
   font-weight: 500;
   margin: 10px 0 10px 0;
 }
+.healthy-recipes button{
+  background: #00ed65!important;
+  color: #219653!important;
+  width: 200px!important;
+}
 /* healthy recipe section ending */
 
 /* blog section  */
@@ -301,7 +307,7 @@ button {
 .blog h3 {
   color: #4d7a35;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .blog p {
   color: #000;
@@ -465,6 +471,22 @@ footer p {
 }
 
 @media (max-width: 560px) {
+  .hero{
+    height: 70vh;
+    padding-top: 50px;
+  }
+  .hero p{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  
+.imgContent .sec-img {
+  width: 100%;    transform: translateY(-168px);
+}
+.consultation img{
+  height: 200px;
+  margin: auto auto;
+}
   .imgContent .fir {
     display: none;
   }
