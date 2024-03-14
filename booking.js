@@ -2,17 +2,36 @@
 const urlParams = new URLSearchParams(window.location.search);
 const reference = urlParams.get('reference');
 
-// Validate the reference (you would replace this with your validation logic)
-const isValidReference = validateReference(reference);
+// Hash the reference
+hashString(reference)
+  .then(hashedReference => {
+    // Validate the reference
+    const isValidReference = validateReference(reference);
 
-// Redirect if the reference is not valid
-if (!isValidReference) {
-  window.location.href = 'https://paystack.com/pay/silastest'; // Redirect to home page
-  console.log('Invalid reference');
-}
+    // If the reference is valid, store the hashed reference in sessionStorage to prevent access with the same reference another time
+    if (isValidReference) {
+      sessionStorage.setItem('payment_hashed_reference', hashedReference);
+    }
 
-// Function to validate the reference (replace this with your validation logic)
+    // Redirect if the reference is not valid
+    if (!isValidReference) {
+      window.location.href = 'index.html'; // Redirect to home page
+    }
+  });
+
+// Function to validate the reference
 function validateReference(reference) {
   // Example validation: Check if the reference is not null and is a valid format
   return reference !== null && reference.match(/^T\d{15}$/) !== null;
+}
+
+// Function to hash a string using SHA-256
+async function hashString(input) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(input);
+
+  const buffer = await window.crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(buffer));
+    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    return hashHex;
 }
