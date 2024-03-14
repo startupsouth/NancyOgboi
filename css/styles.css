@@ -20,7 +20,7 @@ body {
 header {
   max-width: 100%;
   min-width: 100%;
-  height: auto;
+  min-height: 30px;
   background: #fff;
 }
 
@@ -256,6 +256,9 @@ button {
   color: #4d7a35;
   font-weight: bold;
 }
+.cons {
+    padding: 20px 0px 20px 0px;
+}
 /* consultant section ending */
 
 /* healthy recipe section  */
@@ -490,7 +493,7 @@ footer p {
 
 @media (max-width: 560px) {
   .hero{
-    height: 70vh;
+    height: 90vh;
     padding-top: 50px;
   }
   .hero p{
@@ -499,7 +502,7 @@ footer p {
   }
   
 .imgContent .sec-img {
-  width: 100%;    transform: translateY(-168px);
+  width: auto;    transform: translateY(-110px);
 }
 .consultation img{
   height: 200px;
