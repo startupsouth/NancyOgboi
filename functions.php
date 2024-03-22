@@ -176,6 +176,7 @@ function nancy_public_scripts() {
 
     // Enqueue Bootstrap JavaScript
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/bootstrap/bootstrap.min.js', array('jquery'), wp_rand(), true);
+    // wp_enqueue_script('booking', get_template_directory_uri() . '/booking.js', array('jquery'), wp_rand(), true);
 }
 
 add_action( 'wp_enqueue_scripts', 'nancy_public_scripts' );

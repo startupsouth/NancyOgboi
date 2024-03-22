@@ -33,7 +33,7 @@
           class="d-lg-flex"
           style="justify-content: center; margin: 40px 0 40px 0"
         >
-          <button class="visit ms-0">Visit Online Store</button>
+          <button class="visit ms-0"><a href="https://paystack.com/pay/silastest"> Visit Online Store</a></button>
         </form>
         </div>
       </div>

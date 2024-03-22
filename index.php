@@ -19,7 +19,7 @@ get_header();
               </p>
               <div class="button">
                 <button class="visit">Learn More</button>
-                <button class="book">Book A Call</button>
+                <button class="book" id="bookACall">Book A Call</button>
               </div>
             </div>
           </div>
@@ -38,7 +38,8 @@ get_header();
 
 get_template_part( 'assets/template-parts/misc/content', 'about' );    
 get_template_part( 'assets/template-parts/misc/content', 'knowledge' );    
-get_template_part( 'assets/template-parts/misc/content', 'featured-products' );    
+get_template_part( 'assets/template-parts/misc/content', 'featured-products' );     
+get_template_part( 'assets/template-parts/misc/content', 'consultation' );    
 get_template_part( 'assets/template-parts/misc/content', 'newsletter' );  
 get_template_part( 'assets/template-parts/misc/content', 'blog' );  
 ?>

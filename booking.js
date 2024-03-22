@@ -8,14 +8,15 @@ hashString(reference)
     // Validate the reference
     const isValidReference = validateReference(reference);
 
-    // If the reference is valid, store the hashed reference in sessionStorage to prevent access with the same reference another time
+    // If the reference is valid, redirect to the specified URL
     if (isValidReference) {
       sessionStorage.setItem('payment_hashed_reference', hashedReference);
+      window.location.href = 'http://localhost/nancyogboi/?page_id=43';
     }
 
     // Redirect if the reference is not valid
-    if (!isValidReference) {
-      window.location.href = 'index.html'; // Redirect to home page
+    else {
+      window.location.href = 'index.php'; // Redirect to home page
     }
   });
 
@@ -31,7 +32,7 @@ async function hashString(input) {
   const data = encoder.encode(input);
 
   const buffer = await window.crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(buffer));
-    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-    return hashHex;
+  const hashArray = Array.from(new Uint8Array(buffer));
+  const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+  return hashHex;
 }
